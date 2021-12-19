@@ -18,5 +18,4 @@ module.exports.add = add
 module.exports.subtract = subtract
 module.exports.multiply = multiply
 module.exports.divide = divide
-
-console.log(module)
+module.exports.message="MESSAGE"
