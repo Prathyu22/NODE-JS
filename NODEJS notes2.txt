@@ -1,0 +1,16 @@
+Module is an object of itself.
+"Request" executes file first and the access the export's object.
+___________________________________________________________________________________________________________________
+"inner.HTML" replaces the string but not appends.
+"input" is an object.
+Upon refreshing, the string replaces in 'div' when we use 'inner.HTML' because ""DOM RELOADS FROM SCRATCH"".
+___________________________________________________________________________________________________________________
+localStorage is a part of browser and an object which we can access by ourselves.
+Cookies - localStorage - collect and store your data.
+___________________________________________________________________________________________________________________
+localStorage automatically converts array to string.
+typeof arr - string (in localStorage)
+____________________________________________________________________________________________________________________
+"JSON.stringify()" - converts object to string.
+"JSON.parse()" - converts string to object. (here)
+____________________________________________________________________________________________________________________
