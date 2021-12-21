@@ -1,16 +1,9 @@
-Module is an object of itself.
-"Request" executes file first and the access the export's object.
-___________________________________________________________________________________________________________________
-"inner.HTML" replaces the string but not appends.
-"input" is an object.
-Upon refreshing, the string replaces in 'div' when we use 'inner.HTML' because ""DOM RELOADS FROM SCRATCH"".
-___________________________________________________________________________________________________________________
-localStorage is a part of browser and an object which we can access by ourselves.
-Cookies - localStorage - collect and store your data.
-___________________________________________________________________________________________________________________
-localStorage automatically converts array to string.
-typeof arr - string (in localStorage)
-____________________________________________________________________________________________________________________
-"JSON.stringify()" - converts object to string.
-"JSON.parse()" - converts string to object. (here)
-____________________________________________________________________________________________________________________
+Resolve() ---> converts relative to the absolute path.
+_________________________________________________________________________________
+path.relative() --- converts into relative.
+Right side path is relative to the left side path.
+2 parameters ---> 1.Relative to which you want the path to do.
+                  2. actual/absolute path or relative path of the file or folder.
+../ - relative to the previous folder.
+./  - relative to the current folder.
+/   - relative to root.
