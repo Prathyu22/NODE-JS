@@ -1,19 +1,27 @@
-const path = require('path')
-//console.log(path)
+const fs = require('fs') // fs --> FileSystem.
+//console.log(fs)
+//fs module ---> It allow to access your disk. Used to write, read, update delete on hard disk.
 
-path.resolve('./utils.js') //relative path
-console.log(path.resolve('./utils.js')) // Absolute path --- starts from the core of the machine.
-//Resolve() --- converts the relative to the absolute path.
+fs.readFile('./text.txt', (error,data) => {
+    if(error) 
+        console.log(error)
+    else {
+        console.log(typeof data) //object
+        console.log(data) //buffer
+        console.log(data.toString()) //text given in text.txt
+    }
+})
 
-console.log(path.relative('/',"./utils.js"))// returns the path of temp/utils.js relative to the temp folder.
-//path.relative() --- converts into relative.
-//Right side path is relative to the left side path.
-//2 parameters ---> 1.Relative to which you want the path to do.
-//                  2. actual/absolute path or relative path of the file or folder.
+/*fs.readFile('./text.txt','utf8', (error,data) => {
+    if(error) 
+        console.log(error)
+    else {
+        console.log(typeof data) //string
+        console.log(data) //text given in text.txt
+        console.log(data.toString()) //text given in text.txt 
+    }
+})*/
+
+console.log(fs.readFileSync('./text.txt','utf8'))
+console.log(`I'm a random log`)
  
-console.log(path.extname('./utils.js')) // gives you the extension nme.
-
-console.log(path.dirname('./temp/utils.js')) // directory name.
-
-console.log(__dirname) // path of the current directory.
-console.log(path.join(__dirname, 'utils.js')) // same as resolve().

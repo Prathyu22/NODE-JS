@@ -1,9 +1,7 @@
-Resolve() ---> converts relative to the absolute path.
-_________________________________________________________________________________
-path.relative() --- converts into relative.
-Right side path is relative to the left side path.
-2 parameters ---> 1.Relative to which you want the path to do.
-                  2. actual/absolute path or relative path of the file or folder.
-../ - relative to the previous folder.
-./  - relative to the current folder.
-/   - relative to root.
+Buffer is the raw data. We can easily convert buffer into data.
+Buffer is just an array. It is a Object type.
+We can convert buffer to string using toString() method.
+
+utf8 is the optional parameter which provides string instead of buffer.
+
+readFile() --> asynchronous method.
