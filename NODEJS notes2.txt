@@ -1,7 +1,0 @@
-Buffer is the raw data. We can easily convert buffer into data.
-Buffer is just an array. It is a Object type.
-We can convert buffer to string using toString() method.
-
-utf8 is the optional parameter which provides string instead of buffer.
-
-readFile() --> asynchronous method.
