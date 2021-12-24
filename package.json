@@ -3,23 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "axios": "^0.24.0",
-    "express": "^4.17.2"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Prathyu22/NODE-_JS.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Prathyu22/NODE-_JS/issues"
   },
-  "homepage": "https://github.com/Prathyu22/NODE-_JS#readme"
+  "homepage": "https://github.com/Prathyu22/NODE-_JS#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
