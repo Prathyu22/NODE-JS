@@ -1,20 +1,21 @@
+//Importing
 const http = require('http')
-//console.log(http)
 const fs = require('fs')
 const path = require('path')
 
+//Routing
 const server = http.createServer((request, response) => {
-    //console.log(request.url)
-    //console.log(request.headers)
-    //console.log(request.method)
-    //const path = request.url
-    //response.write(`You made a request to ${path}`)
-    //response.write(' Hello World!!')
-    //response.write(`<h1> I'm a heading. Sending this heading from server.</h1>`)
-    //response.write(`./index.html`)
-    const markup = fs.readFileSync(path.resolve('./index.html'))
-    response.write(markup)
-    response.end()
+    const {url} = request
+    if(url == '/login')
+    {
+        response.write('<h1>LOGIN</h1>')
+        response.end()
+    }
+    if(url == '/signup')
+    {
+        response.write('<h1>SIGN UP</h1>')
+        response.end()
+    }
 })
 
 //To start/run server --> server.listen()

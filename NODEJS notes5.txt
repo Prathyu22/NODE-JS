@@ -1,5 +1,0 @@
-http.createServer() ---> method which create server and return server instance.
-
-headers ---> extra information that requests contain.
-
-execute this file with localhost:3000/article/read/... as url.
