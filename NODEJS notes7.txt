@@ -1,0 +1,16 @@
+In case of express, module.exports() is a function --> returns the object.
+app is an instance of express().
+
+The 'search engine' can only make "GET" requests.
+
+header ---> contains extra information of address.
+
+The most reliable check is header check ---> from where the request coming from...
+
+middleware ---> It is a verify function ---> It can have 3 parameters 
+                                             1. request    
+                                             2. response
+                                             3. next  //The job of middleware is done.
+                                        ---> This executes after "route" and before "callback().
+
+next ---> proceeds to the next callback() / next middleware.
