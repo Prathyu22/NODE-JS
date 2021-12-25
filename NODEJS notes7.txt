@@ -1,16 +1,10 @@
-In case of express, module.exports() is a function --> returns the object.
-app is an instance of express().
+Authentication has "headers" in it i.e., through headers, authentication can be implemented.
 
-The 'search engine' can only make "GET" requests.
+request (has)---> header
+                  body
+                  path 
 
-header ---> contains extra information of address.
+content-type ---> tells browser which type of content is there in the body.
 
-The most reliable check is header check ---> from where the request coming from...
-
-middleware ---> It is a verify function ---> It can have 3 parameters 
-                                             1. request    
-                                             2. response
-                                             3. next  //The job of middleware is done.
-                                        ---> This executes after "route" and before "callback().
-
-next ---> proceeds to the next callback() / next middleware.
+app.use() ---> allows us to use middleware.
+               It acts as a middleware for each and every function without calling.
