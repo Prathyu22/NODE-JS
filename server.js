@@ -1,24 +1,21 @@
-//Importing
-const http = require('http')
-const fs = require('fs')
-const path = require('path')
+const express = require('express')
+const app = express() //instatiating express.
 
-//Routing
-const server = http.createServer((request, response) => {
-    const {url} = request
-    if(url == '/login')
-    {
-        response.write('<h1>LOGIN</h1>')
-        response.end()
-    }
-    if(url == '/signup')
-    {
-        response.write('<h1>SIGN UP</h1>')
-        response.end()
-    }
+app.get('/', (req,res) => {
+    console.log(req.url) // '/' ---> in terminal
+    res.send('This is the homepage') //response  ---> in browser
 })
 
-//To start/run server --> server.listen()
-server.listen(3000, () => {
-    console.log(`Server listening at PORT: ${3000}`)
-}) 
+app.get('/login', (req,res) => {
+    console.log(req.url) //  '/login'  ---> in terminal
+    res.send('This is the login page.') //response ---> in browser
+})
+
+app.get('/signup', (req,res) => {
+    console.log(req.url) // '/signup' ---> in terminal 
+    res.send('This is the signup page.') //response ---> in browser
+})
+
+app.listen(3000, () => {
+    console.log("Server listening at PORT 3000")
+})
