@@ -1,5 +1,5 @@
 CRUD ---> Create
-          R
+          Read
           Update
           Delete
 
