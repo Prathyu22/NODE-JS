@@ -1,0 +1,8 @@
+CRUD ---> Create
+          Read
+          Update
+          Delete
+
+Public Route ---> Everyone is able to access.
+
+res.send() ---> send the data as text.
