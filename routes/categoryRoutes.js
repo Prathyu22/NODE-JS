@@ -4,6 +4,11 @@ const router = express.Router()
 
 const {v4: uuidv4} = require('uuid');
 
+/*
+ROUTE : http://localhost:3001/category/all
+METHOD : GET
+*/
+
 router.get('/all', (req,res) => {
     
     try {
@@ -21,6 +26,10 @@ router.get('/all', (req,res) => {
     }
 })
 
+/*
+ROUTE : http://localhost:3001/category/add
+METHOD : POST
+*/
 router.post('/add',(req,res) => {
 
     const {name} = req.body
@@ -36,6 +45,39 @@ router.post('/add',(req,res) => {
         else console.log('Already exists.')
         res.json({
             categories: database.categories,
+            message: "Successfully added categories",
+            status: "SUCCESS"
+        }) 
+    } catch (error) {
+        res.json({
+            categories: [],
+            message: error.message,
+            status: "FAILED"
+        })
+    }
+})
+
+/*
+ROUTE : http://localhost:3001/category/delete
+METHOD : DELETE
+*/
+
+router.delete('/delete',(req,res) => {
+     
+    try {
+        
+        const{id} = req.body
+        /*let element = database.categories.find(item => item.id === id)
+        const index = database.categories.indexOf(element)
+        database.categories.splice(index,1)*/
+        
+    /*----filter don't modify the existing array. It creates new array.---------*/
+        
+        const newCategories = database.categories.filter(item => item.id!==id)
+        database.categories = newCategories
+        
+        res.json({
+            categories: newCategories,
             message: "Successfully added categories",
             status: "SUCCESS"
         }) 
