@@ -90,4 +90,10 @@ router.delete('/delete/:id',(req,res) => {
     }
 })
 
+/*
+ROUTE : http://localhost:3001/category/update
+METHOD : PUT
+*/
+
+
 module.exports = router
