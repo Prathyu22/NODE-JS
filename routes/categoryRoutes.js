@@ -30,9 +30,10 @@ router.post('/add',(req,res) => {
             id: uuidv4() //string
     }
 
-    database.categories.push(newCategory)
-
     try {
+        let includes = database.categories.find(item => item.name === name)
+        if (!includes) database.categories.push(newCategory)
+        else console.log('Already exists.')
         res.json({
             categories: database.categories,
             message: "Successfully added categories",
