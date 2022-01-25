@@ -1,2 +1,0 @@
-Dynamic Route ---> can be created under which many othe routes can be placed.
-              ---> This can be created using ':' (colon).

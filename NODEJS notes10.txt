@@ -1,0 +1,2 @@
+Schema is just a blueprint.
+Router is just an express object which allows you to create you a Route.

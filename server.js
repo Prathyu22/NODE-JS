@@ -1,19 +1,20 @@
 const express = require('express')
 const app = express() //instance of express. 
 const PORT = 3001
+const databse = require('./database/db')
+const categoryRoutes = require('./routes/categoryRoutes')
+app.use(express.json())
 
-app.get('/products/cases')
-app.get('/products/protection')
-app.get('/products/bands')
+app.use('/category', categoryRoutes)
 
-//Dynamic Route
-app.get('/products/:categories',(req,res) => {
-    console.log(req.params) //params -- parameters.
-    res.send('PING')
-})
+/*app.get('/', (req,res) => {
+    try {
+        console.log(document)
+    } catch (error) {
+        res.send(203).send(error.message)
+    }
+})*/
 
 app.listen(PORT, () => {
     console.log(`Server running at PORT ${PORT}`)
 })
-
-module.exports = () => {} 
